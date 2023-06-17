@@ -1,0 +1,190 @@
+@media(max-width: 1350px) {
+    .lessons__lesson-visible{
+        flex-direction: column;
+    }
+    .lessons__container{
+        margin-left: 0;
+        margin-top: 10px;
+    }
+    *{
+        --font-size-main: 27px;
+    }
+    .user__avatar{
+        width: 100px;
+    }
+    .admin{
+        flex-direction: column;
+    }
+    .admin__table{
+        margin-left: 0;
+        margin-top: 20px;
+    }
+    .admin__aside{
+        max-width: none;
+    }
+    .user{
+        max-width: none;
+    }
+}
+@media(max-width: 1100px) {
+    
+}
+@media(max-width: 1000px) {
+    .user{
+        height: auto;
+    }
+    .main{
+        flex-direction: column;
+    }
+    .deadlines{
+        margin-left: 0;
+        margin-top: 20px;
+    }
+    
+    .header__menu{
+        display: none;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-color: #FFF;
+        padding: 10px;
+        flex-direction: column-reverse;
+        align-items: flex-end;
+        box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+    .header__menu .header__menu-button{
+        margin: 15px 0;
+    }
+    .header__link{
+        display: flex;
+        margin: 10px 0;
+    }
+    
+    .header__menu-button{
+        display: block;
+    }
+}
+@media(max-width: 860px) {
+    .information{
+        flex-direction: column;
+    }
+    .session{
+        margin-left: 0;
+        margin-top: 20px;
+    }
+    .container{
+        padding: 10px;
+    }
+    .admin__table tr td{
+        font-size: 21px;
+    }
+}
+@media(max-width: 560px) {
+    .lessons__lesson-list{
+        padding: 10px 5px;
+    }
+    .login{
+        padding: 0 10px;
+    }
+    .login__inner{
+        padding: 10px;
+    }
+    .deadlines__scroll-container::-webkit-scrollbar, .lessons__body::-webkit-scrollbar, .session__body::-webkit-scrollbar, .modal__scroll-container::-webkit-scrollbar{
+        width: 3px;
+        height: 3px;  /* ширина всей полосы прокрутки */      
+        border-radius: 12px;      
+    }
+    .modal__title{
+        padding-right: 50px;
+    }
+    .modal__addForm-row{
+        font-size: 18px;
+    }
+    .modal__form-blueBtn{
+        min-width: fit-content;
+        width: 100%;
+    }
+    .control__button-outer{
+        flex-direction: column;
+    }
+    .control__button-inner{
+        display: none;
+    }
+    .control__button-outer span{
+        min-width: fit-content;
+    }
+    .user__ticket{
+        text-align: center;
+    }
+    .header__menu{
+        align-items: center;
+    }
+    *{
+        --font-size-main: 21px;
+        --line-height-adaptive: 21px;
+    }
+    .modal__subtitle{
+        font-size: 18px;
+    }
+    .user__avatar{
+        margin: 10px auto;
+        display: flex;
+        float: none;
+    }
+    .user__nickname{
+        margin-bottom: 7px;
+        line-height: 21px;
+        text-align: center;
+    }
+    .user__group{
+        margin-bottom: 7px;
+        text-align: center;
+    }
+    .beta_version{
+        margin-top: 10px;
+    }
+    .header__year{
+        width: fit-content;
+    }
+    .header__messages{
+        width: fit-content;
+    }
+    .header__link{
+        width: fit-content;
+    }
+    .session__item span{
+        min-width: fit-content;
+        margin: 5px 0;
+    }
+    .session__item{
+        flex-direction: column;
+        align-items: center;
+    }
+    .lessons, .deadlines, .session, .user{
+        padding: 10px;
+    }
+    .modal{
+        padding: 10px;
+    }
+    .modal__title{
+        text-align: start;
+    }
+    .modal__close{
+        right: 10px;
+        top: 10px;
+    }
+    .session__body{
+        padding-right: 10px;
+    }
+}
+@media(max-width: 380px) {
+    .header__year-value{
+        height: fit-content;
+    }
+    .lessons__popup{
+        width: 100%;
+        min-height: fit-content;
+        min-width: fit-content;
+    }
+}

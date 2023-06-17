@@ -116,7 +116,7 @@ $('#newCourseLesson').on('click', function () {
 
 $('#editGroupStudent').on('click', function () {
     $(this).siblings('.modal__editForm-studentsNames').append($('<div>', { class: 'modal__editForm-pair' })).children('.modal__editForm-pair:last-of-type').append(
-        $('<input>', { type: 'text', class: 'modal__addForm-row', placeholder: 'Введіть ідентифікатор студента' }),
+        $('<input>', { type: 'text', name: 'editGroupStudent[]', class: 'modal__addForm-row', placeholder: 'Введіть ідентифікатор студента' }),
         $('<span>', { class: 'modal__editForm-removePair', text: 'X' })
     );
 });

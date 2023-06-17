@@ -347,15 +347,15 @@ $current_user = 'olga.eroshenko@nure.ua';
                 Змінити інформацію про групу
             </b>
             <div class="modal__scroll-container">
-                <input type="text" class="modal__addForm-row" placeholder="Введіть групу для пошуку">
+                <input type="text" form="editGroupAdmin" name="group" class="modal__addForm-row" placeholder="Введіть групу для пошуку">
                 <b class="modal__subtitle">Змінити</b>
-                <form action="" class="modal__admin-form" method="post">
-                    <input type="text" class="modal__addForm-row" placeholder="Ідентифікатор групи">
-                    <input type="text" class="modal__addForm-row" placeholder="Назва групи">
+                <form action="./php/admin/edit_group.php" class="modal__admin-form" method="post" id="editGroupAdmin">
+                    <input type="text" name="groupId" class="modal__addForm-row" placeholder="Ідентифікатор групи">
+                    <input type="text" name="groupName"class="modal__addForm-row" placeholder="Назва групи">
                     <b class="modal__subtitle">Студенти</b>
                     <div class="modal__editForm-studentsNames">
                         <div class="modal__editForm-pair">
-                            <input type="text" class="modal__addForm-row" placeholder="Введіть ідентифікатор студента">
+                            <input type="text" name="editGroupStudent[]" class="modal__addForm-row" placeholder="Введіть ідентифікатор студента">
                             <span class="modal__editForm-removePair">X</span>
                         </div>
                     </div>

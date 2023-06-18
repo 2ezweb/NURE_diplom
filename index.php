@@ -41,10 +41,10 @@ $current_user = $_COOKIE['user'];
                 </div>
                 <a href="#" class="header__link">NURE.CLASSROOM /// BETA</a>
                 <div class="header__messages">
-                    <div class="header__message">
+                    <!-- <div class="header__message">
                         <img src="./content/mail.svg" alt="">
                         <div class="header__message-count">1</div>
-                    </div>
+                    </div> -->
                     <div class="header__time" id="clock">
                         <span class="header__time-hour"></span><span class="header__time-dbldot">:</span><span
                             class="header__time-minute"></span>

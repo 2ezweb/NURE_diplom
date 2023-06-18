@@ -42,12 +42,12 @@ $current_user = 'olga.eroshenko@nure.ua';
                     <p class="header__year-text">Навчальний рік</p>
                     <div class="header__year-value">22/23</div>
                 </div>
-                <a href="#" class="header__link">NURE.CLASSROOM /// BETA</a>
+                <a href="admin.php" class="header__link">NURE.CLASSROOM /// BETA</a>
                 <div class="header__messages">
-                    <div class="header__message">
+                    <!-- <div class="header__message">
                         <img src="./content/mail.svg" alt="">
                         <div class="header__message-count">1</div>
-                    </div>
+                    </div> -->
                     <div class="header__time" id="clock">
                         <span class="header__time-hour"></span><span class="header__time-dbldot">:</span><span
                             class="header__time-minute"></span>

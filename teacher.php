@@ -186,11 +186,7 @@ _TABLE;
                         <span class="session__date">24.02</span>
                         <div class="session__status session__status-teacher"></div>
                     </div>
-                    <div class="session__item">
-                        <span class="session__name">КСМ</span>
-                        <span class="session__date">24.02</span>
-                        <div class="session__status">69/100</div>
-                    </div>
+
                     <div class="session__item">
                         <span class="session__name">ЗіКСМ</span>
                         <span class="session__date">24.02</span>

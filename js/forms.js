@@ -5,10 +5,11 @@ function Student(fullName, taskName, taskStatus){
 }
 $('.openmodal-btn__tasks').on('click', function(){
     let group_name = $(this).parents('.lessons__container').siblings('.lessons__lesson-name').children('.lessons__lesson-text').html();
-    $.post('../php/database/group_results.php', {group: group_name}).done(function(data){
+    lessonName = $(this).parents('.lessons__lesson-list').siblings('.lessons__lesson-fullname').children('span').text();
+    $.post('../php/database/group_results.php', {group: group_name, lessonName: lessonName}).done(function(data){
         $('.modal.tasks .modal__table').html(data);
     });
-});
+}); 
 $('.openmodal-btn__access').on('click', function(){
     let lessonName = $(this).parents('.lessons__lesson-list').siblings('.lessons__lesson-fullname').children('span').text();
     let groupName = $(this).parents('.lessons__container').siblings('.lessons__lesson-name').children('.lessons__lesson-text').text();
@@ -67,7 +68,7 @@ $('.modal.tasks').on('click', '.editConfirm', function() {
             $('.editBtn').html('Відмінити');
         }
         let group_name = $('.modal__hidden-groupname').val();
-        $.post('../php/database/group_results.php', {group: group_name}).done(function(data){
+        $.post('../php/database/group_results.php', {group: group_name, lessonName: lessonName}).done(function(data){
             $('.modal.tasks .modal__table').html(data);
         });
       },

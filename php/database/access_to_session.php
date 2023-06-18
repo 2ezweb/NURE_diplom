@@ -14,8 +14,9 @@
         JOIN student_status ON student.id_status = student_status.id_status
         JOIN groups_students ON groups_students.id_student = student.id_student
         JOIN groups_names ON groups_names.id_group = groups_students.id_group
-        WHERE CONCAT(student.last_name,' ', LEFT(student.first_name, 1),'.', LEFT(student.middle_name, 1),'.') = '$student_fullname' AND groups_names.group_name = '$group_name'");
+        WHERE groups_names.group_name = '$group_name'");
     $access_length = $access->num_rows;
+    echo $access->num_rows;
     for($i = 0; $i < $access_length; ++$i){
         $access->data_seek($i);
         $student_fullname = $access -> fetch_assoc()['student_fullname'];
@@ -29,7 +30,6 @@
             JOIN groups_names ON groups_students.id_group = groups_names.id_group
             WHERE CONCAT(student.last_name,' ', LEFT(student.first_name, 1),'.', LEFT(student.middle_name, 1),'.') = '$student_fullname'
             AND lessons.lesson_fullname = '$lesson_name' AND groups_names.group_name = '$group_name'");
-       
         $index = $i + 1;
         echo <<< _ACCESS
         <tr class="modal__table-row">

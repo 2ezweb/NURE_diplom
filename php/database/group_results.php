@@ -1,6 +1,7 @@
 <?php
 require_once('../functions.php');
 require_once('../connection.php');
+$lesson_name = get_post($conn, 'lessonName');
 $group_name = get_post($conn, 'group');
 $result = $conn->query("SELECT CONCAT(student.last_name,' ', LEFT(student.first_name, 1),'.', LEFT(student.middle_name, 1),'.') AS student_fullname FROM groups_students
 JOIN groups_names ON groups_names.id_group=groups_students.id_group
@@ -19,12 +20,10 @@ for ($j = 0; $j < $rows; ++$j) {
     $index = ++$j;
     $tasks = $conn->query("SELECT tasks.task_name, tasks.task_status FROM tasks
     JOIN lessons ON lessons.id_lesson=tasks.id_lesson
-    JOIN teacher ON teacher.id_teacher=lessons.id_teacher
-    JOIN courses_body ON courses_body.id_lesson=lessons.id_lesson 
-    JOIN groups_names ON groups_names.id_group=courses_body.id_group
-    JOIN groups_students ON groups_students.id_group=courses_body.id_group
-    JOIN student ON groups_students.id_student=student.id_student
-    WHERE groups_names.group_name = '$group_name' AND CONCAT(student.last_name,' ', LEFT(student.first_name, 1),'.', LEFT(student.middle_name, 1),'.') = '$student_fullname'");
+    JOIN student ON student.id_student=tasks.id_student
+    JOIN groups_students ON groups_students.id_student=student.id_student
+    JOIN groups_names ON groups_names.id_group=groups_students.id_group
+    WHERE groups_names.group_name = '$group_name' AND CONCAT(student.last_name,' ', LEFT(student.first_name, 1),'.', LEFT(student.middle_name, 1),'.') = '$student_fullname' AND lessons.lesson_fullname = '$lesson_name'");
 
     $items = $tasks->num_rows;
 

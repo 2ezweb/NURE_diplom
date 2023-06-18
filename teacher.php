@@ -177,21 +177,11 @@ _TABLE;
                 </div>
                 <div class="session__body">
                     <div class="session__item">
-                        <span class="session__name">МОАП</span>
-                        <span class="session__date">24.02</span>
+                        <span class="session__name">ВебПрог</span>
+                        <span class="session__date">30.06</span>
                         <div class="session__status session__status-teacher"><img src="./content/session_status/done.svg" alt=""></div>
                     </div>
-                    <div class="session__item">
-                        <span class="session__name">АЗКМ</span>
-                        <span class="session__date">24.02</span>
-                        <div class="session__status session__status-teacher"></div>
-                    </div>
-
-                    <div class="session__item">
-                        <span class="session__name">ЗіКСМ</span>
-                        <span class="session__date">24.02</span>
-                        <div class="session__status session__status-teacher"></div>
-                    </div>
+                    
                 </div>
             </div>
         </section>
